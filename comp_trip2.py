@@ -77,6 +77,9 @@ import sys
 
 
 def compareTriplets(a, b):
+    # variable comparing each specific scenerios
+    result = [1 if x > y else -1 if y > x else 0 for x, y in list(zip(a, b))]
+    return result.count(1), result.count(-1)
 
 
 if __name__ == '__main__':
