@@ -49,6 +49,16 @@ import sys
 
 
 def aVeryBigSum(ar):
+    # using the sum method works
+    # return sum(ar)
+
+    # first a container to store the result of the sum
+    res = 0
+    # second itterate the four loop
+    # look through the array
+    for i in ar:
+        res = res + i
+    return res
 
 
 if __name__ == '__main__':
