@@ -75,6 +75,29 @@ import sys
 
 def diagonalDifference(arr):
     # Write your code here
+    # think of square mattrix as 2d list equal number of columns (list of lists)
+    # Write your code here
+    leftDiagonalSum, rightDiagonalSum = 0, 0
+    arr_len = len(arr)
+    i = 0
+    j = 0
+
+    # loop through square
+    while(i < arr_len):
+        leftDiagonalSum += arr[i][j]
+        i += 1
+        j += 1
+
+    i = 0
+    j = arr_len - 1
+
+    # loop through square
+    while(i < arr_len):
+        rightDiagonalSum += arr[i][j]
+        i += 1
+        j -= 1
+
+    return abs(leftDiagonalSum - rightDiagonalSum)
 
 
 if __name__ == '__main__':
